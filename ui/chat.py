@@ -596,8 +596,8 @@ def chat_page(localizer):
                     show_label=False, placeholder="Input...", lines=10, elem_id='chat-model-user-input')
                 with gr.Accordion(label='', visible=False, elem_id='chat-model-submitGroup') as parallel_local_model_submitGroup:
                     parallel_local_model_submitBtn = gr.Button(
-                        localizer("submit"), variant="primary", elem_id='chat-model-submitBtn')
-                    parallel_local_model_emptyBtn = gr.Button(localizer("Clear History"))
+                        localizer("提交"), variant="primary", elem_id='chat-model-submitBtn')
+                    parallel_local_model_emptyBtn = gr.Button(localizer("清除记录"))
             with gr.Column(scale=1):
                 with gr.Accordion(localizer("载入的向量数据库"),open=True):
                     status = gr.Dataframe(headers=["Chatbot1", "Chatbot2"],

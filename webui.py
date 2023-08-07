@@ -6,11 +6,11 @@ from utils.ui_utils import load_javascript
 from utils.language_switch_utils import Localizer
 import argparse
 
-parser = argparse.ArgumentParser(description="Language")
-parser.add_argument("language", type=str,default="auto", help="auto/en_UK")
-arg = parser.parse_args()
-
-localizer = Localizer(arg.language)
+# parser = argparse.ArgumentParser(description="Language")
+# parser.add_argument("language", type=str,default="auto", help="auto/en_UK")
+# arg = parser.parse_args()
+#
+localizer = Localizer("auto")
 
 with gr.Blocks(analytics_enabled=False) as demo:
     with gr.Tab(localizer("聊天")):
