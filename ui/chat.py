@@ -626,7 +626,7 @@ def chat_page(localizer):
                     parallel_local_model_save = gr.Button(localizer("确定"), variant="primary")
                     parallel_local_model_emptymodelBtn = gr.Button(localizer("清空"))
                 with gr.Accordion(localizer(localizer("使用知识库")), open=False):
-                    switch_chatbot = gr.Radio(["chatbot1","chatbot2"], label=localizer("清空"), value=None)
+                    switch_chatbot = gr.Radio(["chatbot1","chatbot2"], label=localizer("选择Chatbot"), value=None)
                     with gr.Tab(localizer("Embedding API")):
                         emb_api_list = gr.Radio(embedding_api, show_label=False, value=None)
                         with gr.Accordion(localizer('openai参数'), open=True, visible=False) as emb_openai_params:
